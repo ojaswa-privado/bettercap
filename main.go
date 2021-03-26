@@ -69,6 +69,9 @@ func main() {
 	}
 
 	// Then run the caplet if specified.
+	if true {
+		fmt.Println("ok")
+	}
 	if *sess.Options.Caplet != "" {
 		if err = sess.RunCaplet(*sess.Options.Caplet); err != nil {
 			log.Error("error while running caplet %s: %s", tui.Bold(*sess.Options.Caplet), tui.Red(err.Error()))
