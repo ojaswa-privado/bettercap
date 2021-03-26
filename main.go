@@ -63,6 +63,7 @@ func main() {
 	// line, therefore they need to be executed first otherwise
 	// modules might already be started.
 	for _, cmd := range session.ParseCommands(*sess.Options.Commands) {
+		fmt.Println("I know GOLANG")
 		if err = sess.Run(cmd); err != nil {
 			log.Error("error while running '%s': %s", tui.Bold(cmd), tui.Red(err.Error()))
 		}
